@@ -1,0 +1,5 @@
+httpx
+fire
+black
+pytest
+pytest-subtests
