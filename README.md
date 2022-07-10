@@ -1,3 +1,32 @@
+# Algo-Method local template  for C++ forked from [repo](https://github.com/kawamataryo/algo-method-local-template)
+
+## How to use
+
+1. clone repos, [nlohmann/json](https://github.com/nlohmann/json) & [Cppunit/cppunit](https://github.com/Cppunit/cppunit)
+```bash
+$ make setup
+```
+
+2. Generate test cases and answer sheet, the same as the original repo.
+
+```bash
+$ make get_question No=116
+```
+
+3. Run test
+
+write your code into `questions/${No}/tests.cpp`, and run below
+
+```bash
+$ make cpp_test No=116
+```
+
+the following RADME.md for the original repo 
+<br>
+<br>
+----
+----
+
 # Algo-Method local template
 Repository template for a local development environment to efficiently learn the [Algo-method](https://algo-method.com/).
 

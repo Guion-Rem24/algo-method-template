@@ -8,3 +8,12 @@ services:
     volumes:
       - ./scripts:/root/src/scripts
       - ./questions:/root/src/questions
+  cpp:
+    restart: always
+    build:
+      dockerfile: Dockerfile-cpp
+    working_dir: '/root/src'
+    tty: true
+    volumes:
+      - ./scripts:/root/src/scripts
+      - ./questions:/root/src/questions

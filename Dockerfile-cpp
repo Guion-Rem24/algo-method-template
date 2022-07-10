@@ -1,0 +1,6 @@
+FROM gcc:11.3
+USER root
+
+RUN mkdir -p /root/src
+RUN apt update && apt install git
+ENV CPATH="/root/src/scripts/json/include:/root/src/scripts/cppunit:${CPATH}"

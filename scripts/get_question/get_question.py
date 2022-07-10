@@ -61,6 +61,15 @@ def get_question(question_number: int) -> None:
         f.write(
             f'"""\n{BASE_URL}/{str(question_number)}\n\n{problem_text}"""\n\nprint("Hello Algor-Method!")\n')
 
+    # generate tests.cpp
+    with open(f"{os.path.dirname(__file__)}/../run_cpp_test/template.cpp", "r") as f:
+        cpp_template = f.read();
+
+    with open(f"{os.path.dirname(__file__)}/../../{dir_name}/tests.cpp", "w") as f:
+        f.write(
+            f'/*\n{BASE_URL}/{str(question_number)}\n\n{problem_text}*/\n\n{cpp_template}'
+        )
+
 
 if __name__ == "__main__":
     fire.Fire(get_question)
